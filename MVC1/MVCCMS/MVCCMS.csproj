@@ -138,7 +138,17 @@
     <Compile Include="Migrations\201611250846118_InitialCreate.Designer.cs">
       <DependentUpon>201611250846118_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612010835332_OrdersCategories.cs" />
+    <Compile Include="Migrations\201612010835332_OrdersCategories.Designer.cs">
+      <DependentUpon>201612010835332_OrdersCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612010931067_ProductOrderManyToMany.cs" />
+    <Compile Include="Migrations\201612010931067_ProductOrderManyToMany.Designer.cs">
+      <DependentUpon>201612010931067_ProductOrderManyToMany.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\EntityModels\Category.cs" />
+    <Compile Include="Models\EntityModels\Order.cs" />
     <Compile Include="Models\EntityModels\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -162,6 +172,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201611250846118_InitialCreate.resx">
       <DependentUpon>201611250846118_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612010835332_OrdersCategories.resx">
+      <DependentUpon>201612010835332_OrdersCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612010931067_ProductOrderManyToMany.resx">
+      <DependentUpon>201612010931067_ProductOrderManyToMany.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

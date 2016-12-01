@@ -88,5 +88,11 @@ namespace MVCCMS.Controllers
             repository.DeleteProduct(id);
             return RedirectToAction("Index");
         }
+
+        protected override void Dispose(bool disposing)
+        {
+            repository.Dispose();
+            base.Dispose(disposing);
+        }
     }
 }

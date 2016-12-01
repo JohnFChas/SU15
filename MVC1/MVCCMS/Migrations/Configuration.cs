@@ -15,15 +15,27 @@ namespace MVCCMS.Migrations
 
         protected override void Seed(MVCCMS.EntityFramework.Contexts.StoreContext context)
         {
-            var products = new Product[]
-            {
-                new Product { Id = 1, Name = "Product 1", Price = 100 },
-                new Product { Id = 2, Name = "Product 2", Price = 100 },
-                new Product { Id = 3, Name = "Product 3", Price = 100 },
-                new Product { Id = 4, Name = "Product 4", Price = 100 }
-            };
+            Category cat1 = new Category { Id = 1, Name = "Category 1" },
+                     cat2 = new Category { Id = 2, Name = "Category 2" },
+                     cat3 = new Category { Id = 3, Name = "Category 3" };
 
-            context.Products.AddOrUpdate(products);
+            Product prod1 = new Product { Id = 1, Name = "Product 1", Price = 100 },
+                    prod2 = new Product { Id = 2, Name = "Product 2", Price = 100 },
+                    prod3 = new Product { Id = 3, Name = "Product 3", Price = 100 };
+
+            Order order = new Order { Id = 1 };
+
+            cat1.Products.AddRange(new Product[] { prod1, prod2 });
+            cat2.Products.Add(prod3);
+            cat3.Products.Add(prod3);
+            order.Products.AddRange(new Product[] { prod1, prod3 });
+
+            var categories = new Category[] { cat1, cat2, cat3 };
+            var products = new Product[] { prod1, prod2, prod3 };
+
+            context.Categories.AddOrUpdate(categories);
+            //context.Products.AddOrUpdate(products);
+            context.Orders.AddOrUpdate(order);
         }
     }
 }

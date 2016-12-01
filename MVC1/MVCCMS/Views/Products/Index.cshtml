@@ -17,6 +17,9 @@
         <th>
             @Html.DisplayNameFor(model => model.Price)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Categories)
+        </th>
         <th></th>
     </tr>
 
@@ -27,6 +30,12 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @foreach (var category in item.Categories)
+            {
+                <div>@category.Name</div>
+            }
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
