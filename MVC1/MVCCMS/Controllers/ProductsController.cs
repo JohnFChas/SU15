@@ -89,6 +89,8 @@ namespace MVCCMS.Controllers
             return RedirectToAction("Index");
         }
 
+        // The Dispose method is called when the HTTP-response has been sent, we use this
+        // to also dispose of our database connection.
         protected override void Dispose(bool disposing)
         {
             repository.Dispose();

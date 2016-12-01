@@ -9,6 +9,8 @@ namespace MVCCMS.EntityFramework.Contexts
 {
     public class StoreContext : DbContext
     {
+        // Default constructor which sends the name of the connection string
+        // for the database we want to use to the base constructor.
         public StoreContext()
             : base("MyDatabase")
         {
