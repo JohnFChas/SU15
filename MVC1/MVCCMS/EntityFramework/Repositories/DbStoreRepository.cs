@@ -13,17 +13,31 @@ namespace MVCCMS.EntityFramework.Repositories
         // The DbContext is instantiated as a local variable
         StoreContext db = new StoreContext();
 
-        public void CreateProduct(Product newProduct)
+        public bool CreateProduct(Product newProduct)
         {
-            db.Products.Add(newProduct);
-            db.SaveChanges();
+            var product = db.Products.Add(newProduct);
+
+            if (product != null)
+            {
+                db.SaveChanges();
+                return true;
+            }
+
+            return false;
         }
 
-        public void DeleteProduct(int id)
+        public bool DeleteProduct(int id)
         {
             var product = db.Products.SingleOrDefault(p => p.Id == id);
-            db.Products.Remove(product);
-            db.SaveChanges();
+            var removedProduct = db.Products.Remove(product);
+
+            if (removedProduct != null)
+            {
+                db.SaveChanges();
+                return true;
+            }
+
+            return false;
         }
 
         public Product GetProduct(int id)

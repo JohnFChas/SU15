@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace MVCCMS.EntityFramework.Repositories
 {
-    interface IStoreRepository : IDisposable
+    public interface IStoreRepository : IDisposable
     {
         Product[] GetProducts();
         Product GetProduct(int id);
-        void CreateProduct(Product newProduct);
+        bool CreateProduct(Product newProduct);
         void UpdateProduct(Product updatedProduct);
-        void DeleteProduct(int id);
+        bool DeleteProduct(int id);
     }
 }

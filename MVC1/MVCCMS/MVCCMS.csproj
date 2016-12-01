@@ -131,6 +131,7 @@
     <Compile Include="EntityFramework\Contexts\StoreContext.cs" />
     <Compile Include="EntityFramework\Repositories\DbStoreRepository.cs" />
     <Compile Include="EntityFramework\Repositories\IStoreRepository.cs" />
+    <Compile Include="EntityFramework\Repositories\TestStoreRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

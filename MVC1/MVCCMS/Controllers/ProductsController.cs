@@ -17,6 +17,11 @@ namespace MVCCMS.Controllers
             repository = new DbStoreRepository();
         }
 
+        public ProductsController(IStoreRepository repository)
+        {
+            this.repository = repository;
+        }
+
         // GET: Products
         public ActionResult Index()
         {
@@ -37,9 +42,10 @@ namespace MVCCMS.Controllers
             if (!ModelState.IsValid)
                 return View(model);
 
-            repository.CreateProduct(model);
+            if (!repository.CreateProduct(model))
+                return RedirectToAction("Index");
 
-            return RedirectToAction("Index");
+            return View("Index", model);
         }
 
         // GET: Products/Edit/{id}

@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCCMS", "MVCCMS\MVCCMS.csproj", "{3E5A618E-6BE8-4506-9BE2-B3873D07157A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCCMS.tests", "MVCCMS.tests\MVCCMS.tests.csproj", "{F8F0DF10-CB23-4A42-A907-171DD3CD681C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{3E5A618E-6BE8-4506-9BE2-B3873D07157A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E5A618E-6BE8-4506-9BE2-B3873D07157A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E5A618E-6BE8-4506-9BE2-B3873D07157A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8F0DF10-CB23-4A42-A907-171DD3CD681C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8F0DF10-CB23-4A42-A907-171DD3CD681C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8F0DF10-CB23-4A42-A907-171DD3CD681C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8F0DF10-CB23-4A42-A907-171DD3CD681C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
