@@ -33,7 +33,7 @@ namespace MVCCMS.EntityFramework.Repositories
 
         public Product[] GetProducts()
         {
-            return db.Products.Include(p => p.Categories).ToArray();
+            return db.Products.Include(p => p.Category).ToArray();
         }
 
         public void UpdateProduct(Product updatedProduct)
@@ -42,6 +42,13 @@ namespace MVCCMS.EntityFramework.Repositories
             var entry = db.Entry(updatedProduct);
             entry.State = EntityState.Modified;
             db.SaveChanges();
+        }
+
+
+
+        public Category[] GetCategories()
+        {
+            return db.Categories.ToArray();
         }
 
         // IStoreRepository implements IDisposable (and so must all classes implementing it).

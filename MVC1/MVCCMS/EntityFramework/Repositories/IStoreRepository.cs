@@ -14,5 +14,8 @@ namespace MVCCMS.EntityFramework.Repositories
         void CreateProduct(Product newProduct);
         void UpdateProduct(Product updatedProduct);
         void DeleteProduct(int id);
+
+
+        Category[] GetCategories();
     }
 }

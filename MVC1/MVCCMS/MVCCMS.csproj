@@ -152,10 +152,15 @@
     <Compile Include="Migrations\201612010931067_ProductOrderManyToMany.Designer.cs">
       <DependentUpon>201612010931067_ProductOrderManyToMany.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612071056449_ProductCategoryOneToMany.cs" />
+    <Compile Include="Migrations\201612071056449_ProductCategoryOneToMany.Designer.cs">
+      <DependentUpon>201612071056449_ProductCategoryOneToMany.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\EntityModels\Category.cs" />
     <Compile Include="Models\EntityModels\Order.cs" />
     <Compile Include="Models\EntityModels\Product.cs" />
+    <Compile Include="Models\ViewModels\CreateProductVM.cs" />
     <Compile Include="Models\ViewModels\FileUploadVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -187,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612010931067_ProductOrderManyToMany.resx">
       <DependentUpon>201612010931067_ProductOrderManyToMany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612071056449_ProductCategoryOneToMany.resx">
+      <DependentUpon>201612071056449_ProductCategoryOneToMany.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

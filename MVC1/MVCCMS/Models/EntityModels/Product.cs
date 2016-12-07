@@ -15,13 +15,13 @@ namespace MVCCMS.Models.EntityModels
         [Required]
         public double Price { get; set; }
 
-        public virtual List<Category> Categories { get; set; }
+        public int CategoryId { get; set; }
+        public virtual Category Category { get; set; }
 
         public virtual List<Order> Orders { get; set; }
 
         public Product()
         {
-            Categories = new List<Category>();
             Orders = new List<Order>();
         }
     }

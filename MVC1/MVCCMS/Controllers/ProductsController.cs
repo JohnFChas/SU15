@@ -1,5 +1,6 @@
 ﻿using MVCCMS.EntityFramework.Repositories;
 using MVCCMS.Models.EntityModels;
+using MVCCMS.Models.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,7 +28,15 @@ namespace MVCCMS.Controllers
         // GET: Products/Create
         public ActionResult Create()
         {
-            return View();
+            List<SelectListItem> listItems = repository.GetCategories().Select(c => new SelectListItem
+            {
+                Value = c.Id.ToString(),
+                Text = c.Name
+            }).ToList();
+
+            CreateProductVM model = new CreateProductVM { CategoryList = listItems };
+
+            return View(model);
         }
 
         // POST: Products/Create

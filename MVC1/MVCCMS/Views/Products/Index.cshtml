@@ -18,7 +18,7 @@
             @Html.DisplayNameFor(model => model.Price)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Categories)
+            @Html.DisplayNameFor(model => model.Category)
         </th>
         <th></th>
     </tr>
@@ -32,10 +32,7 @@
             @Html.DisplayFor(modelItem => item.Price)
         </td>
         <td>
-            @foreach (var category in item.Categories)
-            {
-                <div>@category.Name</div>
-            }
+            @Html.DisplayFor(modelItem => item.Category.Name)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
